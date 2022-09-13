@@ -1254,22 +1254,22 @@ rules:
 
 
       #==========================================================#
-      # ( e ) --> safari / finder / mail                         #
+      # ( e ) --> Vivaldi / finder / Mimestream                         #
       #==========================================================#
       - description: 'command + e = finder'
         type: basic
         from: { key_code: e, modifiers: { mandatory: [ left_command, right_command,right_control,right_shift,right_option ] } }
         to: [ { shell_command: open -a finder } ]
 
-      - description: 'option + e = mail'
+      - description: 'option + e = Mimestream'
         type: basic
         from: { key_code: e, modifiers: { mandatory: [ left_option, right_command,right_control,right_shift,right_option ] } }
-        to: [ { shell_command: open -a mail } ]
+        to: [ { shell_command: open -a Mimestream } ]
 
-      - description: 'e = safari'
+      - description: 'e = Vivaldi'
         type: basic
         from: { key_code: e, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
-        to: [ { shell_command: open -a Safari } ]
+        to: [ { shell_command: open -a Vivaldi } ]
 
 
       #==========================================================#
@@ -1291,17 +1291,17 @@ rules:
         to: [ { shell_command: open -a iTerm } ]
 
       #==========================================================#
-      # ( t ) --> vscode / typora / notes                        #
+      # ( t ) --> vscode / typora / Logseq                        #
       #==========================================================#
       - description: 'command + t = typora'
         type: basic
         from: { key_code: t, modifiers: { mandatory: [ left_command, right_command,right_control,right_shift,right_option ] } }
         to: [ { shell_command: open -a Typora } ]
 
-      - description: 'option + t = notes'
+      - description: 'option + t = Logseq'
         type: basic
         from: { key_code: t, modifiers: { mandatory: [ left_option, right_command,right_control,right_shift,right_option ] } }
-        to: [ { shell_command: open -a notes } ]
+        to: [ { shell_command: open -a Logseq } ]
 
       - description: 't = vscode'
         type: basic
