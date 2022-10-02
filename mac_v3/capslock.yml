@@ -16,6 +16,15 @@ rules:
   ################################################################
   #                    Capslock to Esc/Hyper                     #
   ################################################################
+  - description: Spacebar to left shift when held, spacebar when tapped
+    manipulators:
+
+      - description: 'spacebar = spacebar(tap) | left shift(hold)'
+        type: basic
+        from: { key_code: spacebar, modifiers: { optional: [ any ] } }
+        to: [ { key_code: left_shift } ]
+        to_if_alone: [ { key_code: spacebar } ]
+
   - description: CapsLock to Hyper
     manipulators:
 
@@ -30,7 +39,7 @@ rules:
         from: { key_code: escape, modifiers: { optional: [ caps_lock ], mandatory: [ right_command,right_control,right_shift,right_option ] } }
         to: [ { key_code: caps_lock , modifiers: [ left_control ] } ]
 
-      - description: 'spacebar = language switch'
+      - description: 'spacebar = quick capture'
         type: basic
         from: { key_code: spacebar, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
         to: [ { key_code: spacebar , modifiers: [ left_control ] } ]
@@ -1254,17 +1263,17 @@ rules:
 
 
       #==========================================================#
-      # ( e ) --> Vivaldi / finder / Mimestream                         #
+      # ( e ) --> Vivaldi / Mimestream                         #
       #==========================================================#
-      - description: 'command + e = finder'
+      - description: 'command + e = Busycal'
         type: basic
         from: { key_code: e, modifiers: { mandatory: [ left_command, right_command,right_control,right_shift,right_option ] } }
-        to: [ { shell_command: open -a finder } ]
+        to: [ { shell_command: open -a Busycal } ]
 
-      - description: 'option + e = Mimestream'
-        type: basic
-        from: { key_code: e, modifiers: { mandatory: [ left_option, right_command,right_control,right_shift,right_option ] } }
-        to: [ { shell_command: open -a Mimestream } ]
+      # - description: 'option + e = Mimestream'
+      #   type: basic
+      #   from: { key_code: e, modifiers: { mandatory: [ left_option, right_command,right_control,right_shift,right_option ] } }
+      #   to: [ { shell_command: open -a Mimestream } ]
 
       - description: 'e = Vivaldi'
         type: basic
@@ -1273,17 +1282,17 @@ rules:
 
 
       #==========================================================#
-      # ( r ) --> iterm / preview / terminal                     #
+      # ( r ) --> iterm2 / messages / terminal                     #
       #==========================================================#
-      - description: 'command + r = preview'
+      - description: 'command + r = messages'
         type: basic
         from: { key_code: r, modifiers: { mandatory: [ left_command, right_command,right_control,right_shift,right_option ] } }
-        to: [ { shell_command: open -a Preview } ]
+        to: [ { shell_command: open -a Messages } ]
 
-      - description: 'option + r = terminal'
-        type: basic
-        from: { key_code: r, modifiers: { mandatory: [ left_option, right_command,right_control,right_shift,right_option ] } }
-        to: [ { shell_command: open -a terminal } ]
+      # - description: 'option + r = terminal'
+      #   type: basic
+      #   from: { key_code: r, modifiers: { mandatory: [ left_option, right_command,right_control,right_shift,right_option ] } }
+      #   to: [ { shell_command: open -a terminal } ]
 
       - description: 'r = iTerm2'
         type: basic
@@ -1293,15 +1302,15 @@ rules:
       #==========================================================#
       # ( t ) --> vscode / typora / Logseq                        #
       #==========================================================#
-      - description: 'command + t = typora'
+      - description: 'command + t = Mimestream'
         type: basic
         from: { key_code: t, modifiers: { mandatory: [ left_command, right_command,right_control,right_shift,right_option ] } }
-        to: [ { shell_command: open -a Typora } ]
+        to: [ { shell_command: open -a Mimestream } ]
 
-      - description: 'option + t = Logseq'
-        type: basic
-        from: { key_code: t, modifiers: { mandatory: [ left_option, right_command,right_control,right_shift,right_option ] } }
-        to: [ { shell_command: open -a Logseq } ]
+      # - description: 'option + t = Logseq'
+      #   type: basic
+      #   from: { key_code: t, modifiers: { mandatory: [ left_option, right_command,right_control,right_shift,right_option ] } }
+      #   to: [ { shell_command: open -a Logseq } ]
 
       - description: 't = vscode'
         type: basic
@@ -1309,58 +1318,58 @@ rules:
         to: [ { shell_command: open -a 'Visual Studio Code' } ]
 
       #==========================================================#
-      # ( y ) --> siri / karabiner / amphetamine                 #
+      # ( y ) --> karabiner / Obsidian / amphetamine                 #
       #==========================================================#
-      - description: 'command + y = karabiner'
-        type: basic
-        from: { key_code: y, modifiers: { mandatory: [ left_command, right_command,right_control,right_shift,right_option ] } }
-        to: [ { shell_command: open -a Karabiner-Elements } ]
-
-      - description: 'option + y = amphetamine'
-        type: basic
-        from: { key_code: y, modifiers: { mandatory: [ left_option, right_command,right_control,right_shift,right_option ] } }
-        to: [ { shell_command: open -a amphetamine } ]
-
-      - description: 'y = Siri'
+      - description: 'y = Karabiner'
         type: basic
         from: { key_code: y, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
-        to: [ { shell_command: open -a Siri } ]
+        to: [ { shell_command: open -a Karabiner-Elements } ]
+
+      - description: 'command + y = Obsidian'
+        type: basic
+        from: { key_code: y, modifiers: { mandatory: [ left_command, right_command,right_control,right_shift,right_option ] } }
+        to: [ { shell_command: open -a Obsidian } ]
+
+      # - description: 'option + y = amphetamine'
+      #   type: basic
+      #   from: { key_code: y, modifiers: { mandatory: [ left_option, right_command,right_control,right_shift,right_option ] } }
+      #   to: [ { shell_command: open -a amphetamine } ]
 
       #==========================================================#
-      # ( f ) --> alfred 4 / Dash / Dictionary                   #
+      # ( f ) --> alfred 4 / Logseq /                    #
       #==========================================================#
-      - description: 'command + f = Dash'
+      - description: 'command + f = Logseq'
         type: basic
         from: { key_code: f, modifiers: { mandatory: [ left_command, right_command,right_control,right_shift,right_option ] } }
-        to: [ { shell_command: open -a Dash } ]
+        to: [ { shell_command: open -a Logseq } ]
 
-      - description: 'option + f = Dictionary'
-        type: basic
-        from: { key_code: f, modifiers: { mandatory: [ left_option, right_command,right_control,right_shift,right_option ] } }
-        to: [ { shell_command: open -a Dictionary } ]
+      # - description: 'option + f = Dictionary'
+      #   type: basic
+      #   from: { key_code: f, modifiers: { mandatory: [ left_option, right_command,right_control,right_shift,right_option ] } }
+      #   to: [ { shell_command: open -a Dictionary } ]
 
-      - description: 'f = Alfred 4'
+      - description: 'f = Raycast'
         type: basic
         from: { key_code: f, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
-        to: [ { shell_command: open -a 'Alfred 4' } ]
+        to: [ { shell_command: open -a 'Raycast' } ]
 
       #==========================================================#
-      # ( g ) --> idea / chrome / calender                       #
+      # ( g ) --> Spotify / Routinery / calender                       #
       #==========================================================#
-      - description: 'command + g = Chrome'
+      - description: 'command + g = Routinery'
         type: basic
         from: { key_code: g, modifiers: { mandatory: [ left_command, right_command,right_control,right_shift,right_option ] } }
-        to: [ { shell_command: open -a 'Google Chrome' } ]
+        to: [ { shell_command: open -a 'Routinery' } ]
 
-      - description: 'option + g = Calender'
-        type: basic
-        from: { key_code: g, modifiers: { mandatory: [ left_option, right_command,right_control,right_shift,right_option ] } }
-        to: [ { shell_command: open -a Calendar } ]
+      # - description: 'option + g = Calender'
+      #   type: basic
+      #   from: { key_code: g, modifiers: { mandatory: [ left_option, right_command,right_control,right_shift,right_option ] } }
+      #   to: [ { shell_command: open -a Calendar } ]
 
-      - description: 'g = Intellij IDEA'
+      - description: 'g = Spotify'
         type: basic
         from: { key_code: g, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
-        to: [ { shell_command: open -a 'IntelliJ IDEA' } ]
+        to: [ { shell_command: open -a 'Spotify' } ]
 
 
 

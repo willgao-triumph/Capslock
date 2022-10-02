@@ -13,6 +13,33 @@
   "repo": "https://github.com/Vonng/Capslock",
   "rules": [
     {
+      "description": "Spacebar to left shift when held, spacebar when tapped",
+      "manipulators": [
+        {
+          "description": "spacebar = spacebar(tap) | left shift(hold)",
+          "type": "basic",
+          "from": {
+            "key_code": "spacebar",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_shift"
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "spacebar"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "description": "CapsLock to Hyper",
       "manipulators": [
         {
@@ -69,7 +96,7 @@
           ]
         },
         {
-          "description": "spacebar = language switch",
+          "description": "spacebar = quick capture",
           "type": "basic",
           "from": {
             "key_code": "spacebar",
@@ -4777,7 +4804,7 @@
       "description": "Hyper Application",
       "manipulators": [
         {
-          "description": "command + e = finder",
+          "description": "command + e = Busycal",
           "type": "basic",
           "from": {
             "key_code": "e",
@@ -4793,28 +4820,7 @@
           },
           "to": [
             {
-              "shell_command": "open -a finder"
-            }
-          ]
-        },
-        {
-          "description": "option + e = Mimestream",
-          "type": "basic",
-          "from": {
-            "key_code": "e",
-            "modifiers": {
-              "mandatory": [
-                "left_option",
-                "right_command",
-                "right_control",
-                "right_shift",
-                "right_option"
-              ]
-            }
-          },
-          "to": [
-            {
-              "shell_command": "open -a Mimestream"
+              "shell_command": "open -a Busycal"
             }
           ]
         },
@@ -4839,7 +4845,7 @@
           ]
         },
         {
-          "description": "command + r = preview",
+          "description": "command + r = messages",
           "type": "basic",
           "from": {
             "key_code": "r",
@@ -4855,28 +4861,7 @@
           },
           "to": [
             {
-              "shell_command": "open -a Preview"
-            }
-          ]
-        },
-        {
-          "description": "option + r = terminal",
-          "type": "basic",
-          "from": {
-            "key_code": "r",
-            "modifiers": {
-              "mandatory": [
-                "left_option",
-                "right_command",
-                "right_control",
-                "right_shift",
-                "right_option"
-              ]
-            }
-          },
-          "to": [
-            {
-              "shell_command": "open -a terminal"
+              "shell_command": "open -a Messages"
             }
           ]
         },
@@ -4901,7 +4886,7 @@
           ]
         },
         {
-          "description": "command + t = typora",
+          "description": "command + t = Mimestream",
           "type": "basic",
           "from": {
             "key_code": "t",
@@ -4917,28 +4902,7 @@
           },
           "to": [
             {
-              "shell_command": "open -a Typora"
-            }
-          ]
-        },
-        {
-          "description": "option + t = Logseq",
-          "type": "basic",
-          "from": {
-            "key_code": "t",
-            "modifiers": {
-              "mandatory": [
-                "left_option",
-                "right_command",
-                "right_control",
-                "right_shift",
-                "right_option"
-              ]
-            }
-          },
-          "to": [
-            {
-              "shell_command": "open -a Logseq"
+              "shell_command": "open -a Mimestream"
             }
           ]
         },
@@ -4959,27 +4923,6 @@
           "to": [
             {
               "shell_command": "open -a 'Visual Studio Code'"
-            }
-          ]
-        },
-        {
-          "description": "command + y = karabiner",
-          "type": "basic",
-          "from": {
-            "key_code": "y",
-            "modifiers": {
-              "mandatory": [
-                "left_command",
-                "right_command",
-                "right_control",
-                "right_shift",
-                "right_option"
-              ]
-            }
-          },
-          "to": [
-            {
-              "shell_command": "open -a Karabiner-Elements"
             }
           ]
         },
@@ -5005,7 +4948,7 @@
           ]
         },
         {
-          "description": "y = Siri",
+          "description": "y = Karabiner",
           "type": "basic",
           "from": {
             "key_code": "y",
@@ -5020,12 +4963,12 @@
           },
           "to": [
             {
-              "shell_command": "open -a Siri"
+              "shell_command": "open -a Karabiner-Elements"
             }
           ]
         },
         {
-          "description": "command + f = Dash",
+          "description": "command + f = Logseq",
           "type": "basic",
           "from": {
             "key_code": "f",
@@ -5041,33 +4984,12 @@
           },
           "to": [
             {
-              "shell_command": "open -a Dash"
+              "shell_command": "open -a Logseq"
             }
           ]
         },
         {
-          "description": "option + f = Dictionary",
-          "type": "basic",
-          "from": {
-            "key_code": "f",
-            "modifiers": {
-              "mandatory": [
-                "left_option",
-                "right_command",
-                "right_control",
-                "right_shift",
-                "right_option"
-              ]
-            }
-          },
-          "to": [
-            {
-              "shell_command": "open -a Dictionary"
-            }
-          ]
-        },
-        {
-          "description": "f = Alfred 4",
+          "description": "f = Raycast",
           "type": "basic",
           "from": {
             "key_code": "f",
@@ -5082,12 +5004,12 @@
           },
           "to": [
             {
-              "shell_command": "open -a 'Alfred 4'"
+              "shell_command": "open -a 'Raycast'"
             }
           ]
         },
         {
-          "description": "command + g = Chrome",
+          "description": "command + g = Routinery",
           "type": "basic",
           "from": {
             "key_code": "g",
@@ -5103,33 +5025,12 @@
           },
           "to": [
             {
-              "shell_command": "open -a 'Google Chrome'"
+              "shell_command": "open -a 'Routinery'"
             }
           ]
         },
         {
-          "description": "option + g = Calender",
-          "type": "basic",
-          "from": {
-            "key_code": "g",
-            "modifiers": {
-              "mandatory": [
-                "left_option",
-                "right_command",
-                "right_control",
-                "right_shift",
-                "right_option"
-              ]
-            }
-          },
-          "to": [
-            {
-              "shell_command": "open -a Calendar"
-            }
-          ]
-        },
-        {
-          "description": "g = Intellij IDEA",
+          "description": "g = Spotify",
           "type": "basic",
           "from": {
             "key_code": "g",
@@ -5144,7 +5045,7 @@
           },
           "to": [
             {
-              "shell_command": "open -a 'IntelliJ IDEA'"
+              "shell_command": "open -a 'Spotify'"
             }
           ]
         }
