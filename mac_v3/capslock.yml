@@ -1161,20 +1161,20 @@ rules:
       #==========================================================#
       # ( q ) --> exit                                           #
       #==========================================================#
-      - description: 'control + q = lock screen'
-        type: basic
-        from: { key_code: q, modifiers: { mandatory: [ left_control,  right_command,right_control,right_shift,right_option ] } }
-        to: [ { key_code: q , modifiers: [ left_control,left_command ] } ]
+      # - description: 'control + q = lock screen'
+      #   type: basic
+      #   from: { key_code: q, modifiers: { mandatory: [ left_control,  right_command,right_control,right_shift,right_option ] } }
+      #   to: [ { key_code: q , modifiers: [ left_control,left_command ] } ]
 
       - description: 'shift + q = logout'
         type: basic
         from: { key_code: q, modifiers: { mandatory: [ left_shift,  right_command,right_control,right_shift,right_option ] } }
         to: [ { key_code: q , modifiers: [ left_shift,left_command ] } ]
 
-      - description: 'command + q = force close app'
+      - description: 'command + q = lock screen'
         type: basic
         from: { key_code: q, modifiers: { mandatory: [ left_command,  right_command,right_control,right_shift,right_option ] } }
-        to: [ { key_code: q , modifiers: [ left_command ] } ]
+        to: [ { key_code: q , modifiers: [ left_control,left_command ] } ]
         # to: [ { key_code: escape , modifiers: [ left_command,left_option ] } ]  # TODO: May not work
 
       - description: 'q = close app'
