@@ -4450,31 +4450,6 @@
           ]
         },
         {
-          "description": "control + q = lock screen",
-          "type": "basic",
-          "from": {
-            "key_code": "q",
-            "modifiers": {
-              "mandatory": [
-                "left_control",
-                "right_command",
-                "right_control",
-                "right_shift",
-                "right_option"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "q",
-              "modifiers": [
-                "left_control",
-                "left_command"
-              ]
-            }
-          ]
-        },
-        {
           "description": "shift + q = logout",
           "type": "basic",
           "from": {
@@ -4500,7 +4475,7 @@
           ]
         },
         {
-          "description": "command + q = force close app",
+          "description": "command + q = lock screen",
           "type": "basic",
           "from": {
             "key_code": "q",
@@ -4518,6 +4493,7 @@
             {
               "key_code": "q",
               "modifiers": [
+                "left_control",
                 "left_command"
               ]
             }
