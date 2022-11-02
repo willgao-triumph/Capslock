@@ -1282,12 +1282,12 @@ rules:
 
 
       #==========================================================#
-      # ( r ) --> iterm2 / messages / terminal                     #
+      # ( r ) --> iTerm2 / Slack / Terminal                     #
       #==========================================================#
-      - description: 'command + r = messages'
+      - description: 'command + r = Slack'
         type: basic
         from: { key_code: r, modifiers: { mandatory: [ left_command, right_command,right_control,right_shift,right_option ] } }
-        to: [ { shell_command: open -a Messages } ]
+        to: [ { shell_command: open -a Slack } ]
 
       # - description: 'option + r = terminal'
       #   type: basic
@@ -1312,13 +1312,13 @@ rules:
       #   from: { key_code: t, modifiers: { mandatory: [ left_option, right_command,right_control,right_shift,right_option ] } }
       #   to: [ { shell_command: open -a Logseq } ]
 
-      - description: 't = vscode'
+      - description: 't = VS Code'
         type: basic
         from: { key_code: t, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
         to: [ { shell_command: open -a 'Visual Studio Code' } ]
 
       #==========================================================#
-      # ( y ) --> karabiner / Obsidian / amphetamine                 #
+      # ( y ) --> Karabiner / Obsidian / ?                 #
       #==========================================================#
       - description: 'y = Karabiner'
         type: basic
@@ -1354,12 +1354,12 @@ rules:
         to: [ { shell_command: open -a 'Raycast' } ]
 
       #==========================================================#
-      # ( g ) --> Spotify / Routinery / calender                       #
+      # ( g ) --> Spotify / Messages / calender                       #
       #==========================================================#
-      - description: 'command + g = Routinery'
+      - description: 'command + g = Messages'
         type: basic
         from: { key_code: g, modifiers: { mandatory: [ left_command, right_command,right_control,right_shift,right_option ] } }
-        to: [ { shell_command: open -a 'Routinery' } ]
+        to: [ { shell_command: open -a 'Messages' } ]
 
       # - description: 'option + g = Calender'
       #   type: basic
