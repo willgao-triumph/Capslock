@@ -1263,7 +1263,7 @@ rules:
 
 
       #==========================================================#
-      # ( e ) --> Vivaldi / Mimestream                         #
+      # ( e ) --> Vivaldi / Busycal                         #
       #==========================================================#
       - description: 'command + e = Busycal'
         type: basic
