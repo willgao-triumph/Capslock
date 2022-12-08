@@ -4500,29 +4500,6 @@
           ]
         },
         {
-          "description": "q = close app",
-          "type": "basic",
-          "from": {
-            "key_code": "q",
-            "modifiers": {
-              "mandatory": [
-                "right_command",
-                "right_control",
-                "right_shift",
-                "right_option"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "q",
-              "modifiers": [
-                "left_command"
-              ]
-            }
-          ]
-        },
-        {
           "description": "shift + w = sleep",
           "type": "basic",
           "from": {
