@@ -3851,7 +3851,7 @@ rules:
   - description: Hyper Application
     manipulators:
       #==========================================================#
-      # ( e ) --> Arc / Mimestream                         #
+      # ( e ) --> Arc / Busycal                         #
       #==========================================================#
       - description: "command + e = Busycal"
         type: basic
