@@ -4500,6 +4500,29 @@
           ]
         },
         {
+          "description": "q = close app",
+          "type": "basic",
+          "from": {
+            "key_code": "q",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "right_control",
+                "right_shift",
+                "right_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "q",
+              "modifiers": [
+                "left_command"
+              ]
+            }
+          ]
+        },
+        {
           "description": "shift + w = sleep",
           "type": "basic",
           "from": {
@@ -4819,7 +4842,7 @@
           ]
         },
         {
-          "description": "r = iTerm2",
+          "description": "r = Warp",
           "type": "basic",
           "from": {
             "key_code": "r",
@@ -4834,7 +4857,7 @@
           },
           "to": [
             {
-              "shell_command": "open -a iTerm"
+              "shell_command": "open -a Warp"
             }
           ]
         },
@@ -4896,27 +4919,6 @@
           "to": [
             {
               "shell_command": "open -a Karabiner-Elements"
-            }
-          ]
-        },
-        {
-          "description": "command + y = Obsidian",
-          "type": "basic",
-          "from": {
-            "key_code": "y",
-            "modifiers": {
-              "mandatory": [
-                "left_command",
-                "right_command",
-                "right_control",
-                "right_shift",
-                "right_option"
-              ]
-            }
-          },
-          "to": [
-            {
-              "shell_command": "open -a Obsidian"
             }
           ]
         },
