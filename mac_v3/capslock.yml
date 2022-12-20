@@ -3886,7 +3886,7 @@ rules:
         to: [{ shell_command: open -a Arc }]
 
       #==========================================================#
-      # ( r ) --> iTerm2 / Slack / Terminal                     #
+      # ( r ) --> Warp / Slack / Terminal                     #
       #==========================================================#
       - description: "command + r = Slack"
         type: basic
@@ -3926,9 +3926,9 @@ rules:
         to: [{ shell_command: open -a Warp }]
 
       #==========================================================#
-      # ( t ) --> vscode / typora / Logseq                        #
+      # ( t ) --> vscode / Things3 / ?                            #
       #==========================================================#
-      - description: "command + t = Mimestream"
+      - description: "command + t = Things3"
         type: basic
         from:
           {
@@ -3945,7 +3945,7 @@ rules:
                   ],
               },
           }
-        to: [{ shell_command: open -a Mimestream }]
+        to: [{ shell_command: open -a Things3 }]
 
       # - description: 'option + t = Logseq'
       #   type: basic
